@@ -39,8 +39,8 @@
   "scripts": {
     "start": "npm run build:watch",
     "build": "npm run build:css && npm run build:minify",
-    "build:css": "node ./scripts/postcss src/modulz-css.css css/modulz-css.css",
-    "build:minify": "node ./scripts/postcss -m src/modulz-css.css css/modulz-css.min.css",
+    "build:css": "mkdir -p css && node ./scripts/postcss src/modulz-css.css css/modulz-css.css",
+    "build:minify": "mkdir -p css && node ./scripts/postcss -m src/modulz-css.css css/modulz-css.min.css",
     "build:watch": "watch \"npm run build\" ./src/"
   }
 }
